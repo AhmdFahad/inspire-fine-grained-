@@ -1,7 +1,8 @@
-package com.ahamdah.springkeycloakauth.config;
+package com.ahamdah.config;
 
-import com.ahamdah.springkeycloakauth.security.CustomAuthenticationEntryPoint;
-import com.ahamdah.springkeycloakauth.security.CustomFilter;
+import com.ahamdah.security.CustomAuthenticationEntryPoint;
+import com.ahamdah.security.CustomFilter;
+import lombok.RequiredArgsConstructor;
 import org.keycloak.adapters.authorization.integration.jakarta.ServletPolicyEnforcerFilter;
 import org.keycloak.adapters.authorization.spi.ConfigurationResolver;
 import org.keycloak.adapters.authorization.spi.HttpRequest;
@@ -18,18 +19,15 @@ import java.io.IOException;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
+
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
 
-  CustomFilter customFilter;
+  private final CustomFilter customFilter;
 
-  CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
-
-  public SecurityConfig(CustomFilter customFilter, CustomAuthenticationEntryPoint customAuthenticationEntryPoint) {
-    this.customFilter = customFilter;
-    this.customAuthenticationEntryPoint = customAuthenticationEntryPoint;
-  }
+  private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
 
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

@@ -1,4 +1,4 @@
-package com.ahamdah.springkeycloakauth.security;
+package com.ahamdah.security;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,7 +12,7 @@ import java.io.IOException;
  *
  * @author AHMED FAHAD ABUHAMDAH (AHAMDAH) (Software Engineer)
  * @since 2024-09-09
- * @see com.ahamdah.springkeycloakauth.config.SecurityConfig
+ * @see com.ahamdah.config.SecurityConfig
  */
 @Component
 public class CustomFilter implements Filter {

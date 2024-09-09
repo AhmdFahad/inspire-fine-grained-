@@ -1,4 +1,4 @@
-package com.ahamdah.springkeycloakauth.security;
+package com.ahamdah.security;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,7 +12,11 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 /**
- * This is responsible to send custom authentication message when token itself fails or any other exception occurred prior to security enforcer.
+ * CustomFilter is  Responsible to handle unauthorized token .
+ *
+ * @author AHMED FAHAD ABUHAMDAH (AHAMDAH) (Software Engineer)
+ * @since 2024-09-09
+ * @see com.ahamdah.config.SecurityConfig
  */
 @Component
 public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
@@ -23,7 +27,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     response.getWriter().write("{\n" +
         "    \"status\": " + HttpStatus.SC_UNAUTHORIZED + ",\n" +
         "    \"error\": \"" + authException.getMessage() + "\",\n" +
-        "    \"message\": \"" + "Your token is expired, Please generate a new one." + "\",\n" +
+        "    \"message\": \"" + "provide the token or check Your token may be expired." + "\",\n" +
         "}");
     response.setHeader(HTTP.CONTENT_TYPE, "application/json");
   }
