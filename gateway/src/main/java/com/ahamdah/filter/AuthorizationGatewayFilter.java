@@ -1,4 +1,4 @@
-package com.ahamdah.ahamdahkeycloakgateway;
+package com.ahamdah.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,6 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class AuthorizationGatewayFilter implements GatewayFilter {
-
 
     private final WebClient webClient = WebClient.create();
     private static final Logger log = LoggerFactory.getLogger(AuthorizationGatewayFilter.class);

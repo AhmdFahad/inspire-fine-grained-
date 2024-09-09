@@ -1,20 +1,18 @@
-package com.ahamdah.ahamdahkeycloakgateway;
+package com.ahamdah.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.ahamdah.filter.AuthorizationGatewayFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
-@SpringBootApplication
-public class AhamdahKeycloakGatewayApplication {
+@Component
+public class Config {
 
-    @Autowired
     private AuthorizationGatewayFilter authorizationGatewayFilter;
 
-    public static void main(String[] args) {
-        SpringApplication.run(AhamdahKeycloakGatewayApplication.class, args);
+    public Config(AuthorizationGatewayFilter authorizationGatewayFilter) {
+        this.authorizationGatewayFilter = authorizationGatewayFilter;
     }
 
     @Bean
