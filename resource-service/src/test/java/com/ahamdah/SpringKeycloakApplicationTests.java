@@ -1,4 +1,4 @@
-package com.ahamdah.springkeycloakauth;
+package com.ahamdah;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

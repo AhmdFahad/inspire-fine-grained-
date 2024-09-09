@@ -22,12 +22,16 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebSecurity
-@RequiredArgsConstructor
 public class SecurityConfig {
 
-  private final CustomFilter customFilter;
+  private CustomFilter customFilter;
 
-  private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+  private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+
+  public SecurityConfig(CustomFilter customFilter, CustomAuthenticationEntryPoint customAuthenticationEntryPoint) {
+    this.customFilter = customFilter;
+    this.customAuthenticationEntryPoint = customAuthenticationEntryPoint;
+  }
 
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
