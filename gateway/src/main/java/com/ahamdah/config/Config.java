@@ -18,9 +18,9 @@ public class Config {
     @Bean
     public RouteLocator routeLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("hr", r -> r.path("/**")
+                .route("hr", r -> r.path("/hr/**")
                         .filters(f -> f.filter(authorizationGatewayFilter))
-                        .uri("lb://INSPIRE-SYSTEM"))
+                        .uri("lb://TEST"))
                 .build();
     }
 }

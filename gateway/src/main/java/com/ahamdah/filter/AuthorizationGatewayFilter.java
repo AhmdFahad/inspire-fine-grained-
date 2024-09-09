@@ -2,6 +2,7 @@ package com.ahamdah.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.http.HttpHeaders;
@@ -15,7 +16,8 @@ import reactor.core.publisher.Mono;
 @Component
 public class AuthorizationGatewayFilter implements GatewayFilter {
 
-    private final WebClient webClient = WebClient.create();
+    @Autowired
+    private WebClient.Builder webClientBuilder;
     private static final Logger log = LoggerFactory.getLogger(AuthorizationGatewayFilter.class);
 
     @Override
@@ -27,8 +29,9 @@ public class AuthorizationGatewayFilter implements GatewayFilter {
         log.info("Resource: {}", resource);
         log.info("HTTP Method: {}", method);
 
-        return webClient.method(method)
-                .uri("http://localhost:8082" + resource)
+        return webClientBuilder.build()
+                .method(method)
+                .uri("lb://RESOURCE-SERVICE" + resource)
                 .header(HttpHeaders.AUTHORIZATION, authHeader)
                 .exchangeToMono(response -> {
                     if (response.statusCode().is2xxSuccessful()) {
