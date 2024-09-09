@@ -1,0 +1,8 @@
+{
+  "realm": "inspire",
+  "auth-server-url": "http://localhost:8080",
+  "resource": "inspire-client",
+  "credentials": {
+    "secret": "yZCG7JfValPT0eRESj9WblcSKkjkvEHW"
+  }
+}
