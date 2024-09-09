@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="resource-service" />
         <module name="service-discovery" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
       <module name="resource service" options="-parameters" />
       <module name="resource-service" options="-parameters" />
       <module name="service-discovery" options="-parameters" />
