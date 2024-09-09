@@ -7,6 +7,24 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
+    <url/>
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>ahamdah</id>
+            <name>AHMAD FAHAD ABUHAMDAH</name>
+            <email>ahamdah@outlook.com</email>
+            <url>https://github.com/AhmdFahad</url>
+        </developer>
+    </developers>
+
+
     <modules>
         <module>resource-service</module>
         <module>service-discovery</module>

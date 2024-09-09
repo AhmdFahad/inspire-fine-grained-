@@ -8,6 +8,7 @@
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.ahamdah</groupId>
 	<artifactId>resource-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -17,6 +18,25 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
 	</properties>
+
+	<url/>
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>ahamdah</id>
+			<name>AHMAD FAHAD ABUHAMDAH</name>
+			<email>ahamdah@outlook.com</email>
+			<url>https://github.com/AhmdFahad</url>
+		</developer>
+	</developers>
+
+
 
 	<dependencyManagement>
 		<dependencies>
