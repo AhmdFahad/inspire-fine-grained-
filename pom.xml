@@ -6,11 +6,10 @@
     <artifactId>inspire-fine-grained</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <properties>
-    </properties>
 
     <modules>
         <module>resource-service</module>
+        <module>service-discovery</module>
     </modules>
 
 </project>
