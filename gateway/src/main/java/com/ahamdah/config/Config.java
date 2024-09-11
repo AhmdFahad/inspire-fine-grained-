@@ -21,6 +21,9 @@ public class Config {
                 .route("hr", r -> r.path("/hr/**")
                         .filters(f -> f.filter(authorizationGatewayFilter))
                         .uri("lb://TEST"))
+                .route("other service", r -> r.path("/ahmed")
+                        .filters(f -> f.filter(authorizationGatewayFilter))
+                        .uri("lb://TEST"))
                 .build();
     }
 }

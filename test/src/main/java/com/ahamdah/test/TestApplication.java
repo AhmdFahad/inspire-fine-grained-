@@ -18,6 +18,10 @@ public class TestApplication {
     private String hello(@PathVariable String id) {
         return "hello : "+ id;
     }
+    @GetMapping("/ahmed/")
+    private String ahmed() {
+        return "hello : ahmed";
+    }
     public static void main(String[] args) {
         SpringApplication.run(TestApplication.class, args);
     }
