@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  eureka-server:
+    hostname: eureka-server
+    image: ahmad1inspire/inspire-service-discovery:1.0.0
+    ports:
+      - "8761:8761"
+    networks:
+      - inspire-network
+  gateway:
+    hostname: gateway
+    image: ahmad1inspire/inspire-gateway:0.0.4-SNAPSHOT
+    environment:
+      EUREKA_CLIENT_ENABLED: true
+      EUREKA_SERVICE_URL: http://eureka-server:8761/eureka/
+    ports:
+      - "8888:8080"
+    networks:
+      - inspire-network
+  resource-service:
+    image: ahmad1inspire/inspire-resource-service:0.0.2-SNAPSHOT
+    ports:
+      - "8082:8082"
+    networks:
+      - inspire-network
+  postgres:
+    image: postgres:16.2
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak_db
+      POSTGRES_USER: keycloak_db_user
+      POSTGRES_PASSWORD: keycloak_db_user_password
+    networks:
+      - inspire-network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.6
+    command: start
+    environment:
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8080
+      KC_HOSTNAME_STRICT_BACKCHANNEL: false
+      KC_HTTP_ENABLED: true
+      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HEALTH_ENABLED: true
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres/keycloak_db
+      KC_DB_USERNAME: keycloak_db_user
+      KC_DB_PASSWORD: keycloak_db_user_password
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - postgres
+    networks:
+      - inspire-network
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  inspire-network:
+    driver: bridge
