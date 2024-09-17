@@ -1,5 +1,6 @@
 package com.ahamdah;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,12 +12,18 @@ import java.util.logging.Logger;
 @RestController
 @SpringBootApplication
 public class SpringKeycloakauthApplication implements CommandLineRunner {
+
 	Logger logger = Logger.getLogger(SpringKeycloakauthApplication.class.getName());
 
+	@Value("${server.port}")
+	private String port;
+	@Value("${spring.profiles.active}")
+	private String activeProfile;
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("Hello World");
+		logger.info("Server started at port " + port);
+		logger.info("Active profile: " + activeProfile);
 	}
 
 	public static void main(String[] args) {

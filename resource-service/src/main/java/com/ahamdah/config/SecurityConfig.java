@@ -2,7 +2,6 @@ package com.ahamdah.config;
 
 import com.ahamdah.security.CustomAuthenticationEntryPoint;
 import com.ahamdah.security.CustomFilter;
-import lombok.RequiredArgsConstructor;
 import org.keycloak.adapters.authorization.integration.jakarta.ServletPolicyEnforcerFilter;
 import org.keycloak.adapters.authorization.spi.ConfigurationResolver;
 import org.keycloak.adapters.authorization.spi.HttpRequest;

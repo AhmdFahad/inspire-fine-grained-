@@ -1,9 +1,6 @@
 spring:
   application:
     name: resource-service
-  output:
-    ansi:
-      enabled: always
   profiles:
     active: @active@
 logging:
