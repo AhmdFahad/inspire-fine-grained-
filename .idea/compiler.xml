@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="resource-service" />
-        <module name="test" />
         <module name="service-discovery" />
         <module name="gateway" />
       </profile>
@@ -16,6 +15,8 @@
     <bytecodeTargetLevel>
       <module name="resource service" target="17" />
       <module name="spring-keycloak-auth" target="17" />
+      <module name="test" target="21" />
+      <module name="test1" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +27,7 @@
       <module name="service-discovery" options="-parameters" />
       <module name="spring-keycloak-auth" options="-parameters" />
       <module name="test" options="-parameters" />
+      <module name="test1" options="-parameters" />
     </option>
   </component>
 </project>
