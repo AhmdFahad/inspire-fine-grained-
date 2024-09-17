@@ -3,6 +3,7 @@ package com.ahamdah.filter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.http.HttpHeaders;
@@ -18,7 +19,8 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 public class AuthorizationErpGatewayFilter implements GatewayFilter {
-
+    @Value("${resource.server}")
+    private String resourceService;
     @Autowired
     private WebClient.Builder webClientBuilder;
     private static final Logger log = LoggerFactory.getLogger(AuthorizationErpGatewayFilter.class);
@@ -37,7 +39,7 @@ public class AuthorizationErpGatewayFilter implements GatewayFilter {
 
         return webClientBuilder.build()
                 .method(method)
-                .uri("http://resource-service.keycloak.svc.cluster.local:8082" + resource)
+                .uri(resourceService + resource)
                 .header(HttpHeaders.AUTHORIZATION, authHeader)
                 .exchangeToMono(response -> {
                     if (response.statusCode().is2xxSuccessful()) {

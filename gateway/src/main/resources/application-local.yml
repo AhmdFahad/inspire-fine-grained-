@@ -1,0 +1,7 @@
+eureka:
+  client:
+    enabled: ${EUREKA_CLIENT_ENABLED:false}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}
+server:
+  port: 8888

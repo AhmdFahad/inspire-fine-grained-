@@ -26,8 +26,8 @@ public class Config {
         return builder.routes()
                 .route("erp-portal", r -> r.path("/api/**")
                         .filters(
-                                f -> f.filter(authorizationErpGatewayFilter)
-                                        .filter(loggerFilter)
+                                f -> f.filter(loggerFilter)
+                                        .filter(authorizationErpGatewayFilter)
                         )
                         .uri("https://erp-qa.inspirejo.com"))
                 .build();
