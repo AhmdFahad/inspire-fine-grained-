@@ -1,0 +1,9 @@
+
+
+eureka:
+  client:
+    enabled: ${EUREKA_CLIENT_ENABLED:true}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}
+resource:
+  server: ${RESOURCE_SERVICE:lb://RESOURCE-SERVICE}

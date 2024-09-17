@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ahamdah</groupId>
     <artifactId>gateway</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>gateway</name>
     <description>gateway</description>
     <properties>
@@ -68,5 +68,22 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <active>dev</active>
+            </properties>
+        </profile>
+        <profile>
+            <id>local</id>
+            <properties>
+                <active>local</active>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

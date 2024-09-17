@@ -1,7 +1,11 @@
 eureka:
   client:
-    enabled: ${EUREKA_CLIENT_ENABLED:false}
+    enabled: ${EUREKA_CLIENT_ENABLED:true}
     serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka}
 server:
   port: 8888
+
+
+resource:
+  server: ${RESOURCE_SERVICE:lb://RESOURCE-SERVICE}
