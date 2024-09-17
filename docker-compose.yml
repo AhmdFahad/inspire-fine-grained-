@@ -19,7 +19,14 @@ services:
     networks:
       - inspire-network
   resource-service:
-    image: ahmad1inspire/inspire-resource-service:0.0.2-SNAPSHOT
+    image: ahmad1inspire/inspire-resource-service:0.0.3-SNAPSHOT
+    environment:
+      EUREKA_CLIENT_ENABLED: true
+      EUREKA_SERVICE_URL: http://eureka-server:8761/eureka
+      KEYCLOAK_REALM_NAME: inspire
+      KEYCLOAK_SERVER_URL: http://keycloak:8080
+      KEYCLOAK_CLIENT_ID: inspire-client
+      KEYCLOAK_CLIENT_SECRET: vYNJUuz0o2Oux2iCI78MU926BsZYkMky
     ports:
       - "8082:8082"
     networks:

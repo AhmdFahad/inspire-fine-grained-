@@ -3,7 +3,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://keycloak:8080/realms/inspire/protocol/openid-connect/certs
+          jwk-set-uri: ${KEYCLOAK_SERVER_URL:http://keycloak:8080}/realms/inspire/protocol/openid-connect/certs
 eureka:
   instance:
     prefer-ip-address: true
@@ -13,11 +13,10 @@ eureka:
       defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}
 server:
   port: 8080
-
 keycloak:
   policy-enforcer:
-    realm: inspire
-    auth-server-url: http://keycloak:8080
-    resource: inspire-client
+    realm: ${KEYCLOAK_REALM_NAME:inspire}
+    auth-server-url: ${KEYCLOAK_SERVER_URL:http://keycloak:8080}
+    resource: ${KEYCLOAK_CLIENT_ID:inspire-client}
     credentials:
-      secret: vYNJUuz0o2Oux2iCI78MU926BsZYkMky
+      secret: ${KEYCLOAK_CLIENT_SECRET:vYNJUuz0o2Oux2iCI78MU926BsZYkMky}
