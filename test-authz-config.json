@@ -1,0 +1,590 @@
+{
+  "allowRemoteResourceManagement": true,
+  "policyEnforcementMode": "ENFORCING",
+  "resources": [
+    {
+      "name": "User Sign Up Resource",
+      "type": "urn:inspire:user-sign-up",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-user-sign-up",
+      "uris": [
+        "/users/signUp"
+      ]
+    },
+    {
+      "name": "User Callback Resource",
+      "type": "urn:inspire:user-callback",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-user-callback",
+      "uris": [
+        "/users/callback"
+      ]
+    },
+    {
+      "name": "User Sign In Resource",
+      "type": "urn:inspire:user-sign-in",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-user-sign-in",
+      "uris": [
+        "/users/signIn"
+      ]
+    },
+    {
+      "name": "Users Resource",
+      "type": "urn:inspire:users",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-users",
+      "uris": [
+        "/users"
+      ]
+    },
+    {
+      "name": "Get User by Email Resource",
+      "type": "urn:inspire:get-user-by-email",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-user-by-email",
+      "uris": [
+        "/users/get-user/{email}"
+      ]
+    },
+    {
+      "name": "Update Set of Users Resource",
+      "type": "urn:inspire:update-set-of-users",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-set-of-users",
+      "uris": [
+        "/users/update-set-of-users"
+      ]
+    },
+    {
+      "name": "Update User Status Resource",
+      "type": "urn:inspire:update-user-status",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-user-status",
+      "uris": [
+        "/users/update-user-status"
+      ]
+    },
+    {
+      "name": "Health Check Resource",
+      "type": "urn:inspire:healthcheck",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-healthcheck",
+      "uris": [
+        "/healthcheck"
+      ]
+    },
+    {
+      "name": "User Switch Account Resource",
+      "type": "urn:inspire:user-switch-account",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-user-switch-account",
+      "uris": [
+        "/users/switch-account"
+      ]
+    },
+    {
+      "name": "Get All Users Resource",
+      "type": "urn:inspire:get-all-users",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-users",
+      "uris": [
+        "/users/getAllUsers"
+      ]
+    },
+    {
+      "name": "Get All Users Salaries Management Resource",
+      "type": "urn:inspire:get-all-salaries",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-users-sal-mgmt",
+      "uris": [
+        "/users/getAllUsersSalariesManagement"
+      ]
+    },
+    {
+      "name": "Update User Time Off Resource",
+      "type": "urn:inspire:update-user-time-off",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-user-time-off",
+      "uris": [
+        "/users/update-user-time-off"
+      ]
+    },
+    {
+      "name": "Update Users Roles Resource",
+      "type": "urn:inspire:update-users-roles",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-users-roles",
+      "uris": [
+        "/users/update-users-roles"
+      ]
+    },
+    {
+      "name": "Get User Details Resource",
+      "type": "urn:inspire:get-user-details",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-user-details",
+      "uris": [
+        "/users/get-user-details"
+      ]
+    },
+    {
+      "name": "Update Users Salaries Resource",
+      "type": "urn:inspire:update-users-salaries",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-users-salaries",
+      "uris": [
+        "/users/update-users-salaries"
+      ]
+    },
+    {
+      "name": "Update Users Salary Packages Resource",
+      "type": "urn:inspire:update-salary-pack",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "uid-update-salary",
+      "uris": [
+        "/users/update-users-salary-packages"
+      ]
+    },
+    {
+      "name": "User Log Out Resource",
+      "type": "urn:inspire:user-log-out",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-user-log-out",
+      "uris": [
+        "/users/user-log-out"
+      ]
+    },
+    {
+      "name": "Get Users Bonuses Resource",
+      "type": "urn:inspire:get-users-bonuses",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-users-bonuses",
+      "uris": [
+        "/users/get-users-bonuses"
+      ]
+    },
+    {
+      "name": "Get All Users Info Resource",
+      "type": "urn:inspire:get-all-users-info",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-users-info",
+      "uris": [
+        "/users/get-all-users-info"
+      ]
+    },
+    {
+      "name": "Get HR Dashboard Summary Resource",
+      "type": "urn:inspire:get-hr-summary",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "urn:inspire:get-hr-summary",
+      "uris": [
+        "/users/get-hr-dashboard-summary"
+      ]
+    },
+    {
+      "name": "Update Vacations Yearly Resource",
+      "type": "urn:inspire:update-vacations-yearly",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-vacations-yearly",
+      "uris": [
+        "/users/update-vacations-yearly"
+      ]
+    },
+    {
+      "name": "Update Vacations Monthly Resource",
+      "type": "urn:inspire:update-vacations-monthly",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-vacations-monthly",
+      "uris": [
+        "/users/update-vacations-monthly"
+      ]
+    },
+    {
+      "name": "Create Country Resource",
+      "type": "urn:inspire:create-country",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-country",
+      "uris": [
+        "/Countries/createCountry"
+      ]
+    },
+    {
+      "name": "Get Countries Resource",
+      "type": "urn:inspire:get-countries",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-countries",
+      "uris": [
+        "/Countries/getCountries"
+      ]
+    },
+    {
+      "name": "Get Country By ID Resource",
+      "type": "urn:inspire:get-country-by-id",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-country-by-id",
+      "uris": [
+        "/Countries/getCountryById"
+      ]
+    },
+    {
+      "name": "Update Country Resource",
+      "type": "urn:inspire:update-country",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-country",
+      "uris": [
+        "/Countries/update-country/{id}"
+      ]
+    },
+    {
+      "name": "Create Role Resource",
+      "type": "urn:inspire:create-role",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-role",
+      "uris": [
+        "/roles/create-role"
+      ]
+    },
+    {
+      "name": "Get All Roles Resource",
+      "type": "urn:inspire:get-all-roles",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-roles",
+      "uris": [
+        "/roles/get-all-roles"
+      ]
+    },
+    {
+      "name": "Update Role Resource",
+      "type": "urn:inspire:update-role",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-role",
+      "uris": [
+        "/roles/update-role/{id}"
+      ]
+    },
+    {
+      "name": "Update Roles Resource",
+      "type": "urn:inspire:update-roles",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-roles",
+      "uris": [
+        "/roles/update-roles"
+      ]
+    },
+    {
+      "name": "Get Users Payroll Resource",
+      "type": "urn:inspire:get-users-payroll",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-users-payroll",
+      "uris": [
+        "/payroll/get-users-payroll"
+      ]
+    },
+    {
+      "name": "Create Payroll Resource",
+      "type": "urn:inspire:create-payroll",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-payroll",
+      "uris": [
+        "/payrolls/create"
+      ]
+    },
+    {
+      "name": "Get Payroll Resource",
+      "type": "urn:inspire:get-payroll",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-payroll",
+      "uris": [
+        "/payroll/get-payroll"
+      ]
+    },
+    {
+      "name": "Get All Payrolls Resource",
+      "type": "urn:inspire:get-all-payrolls",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-payrolls",
+      "uris": [
+        "/payroll/get-all-payrolls"
+      ]
+    },
+    {
+      "name": "Update Payroll Resource",
+      "type": "urn:inspire:update-payroll",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-payroll",
+      "uris": [
+        "/payroll/update-payRoll"
+      ]
+    },
+    {
+      "name": "Create Contract Resource",
+      "type": "urn:inspire:create-contract",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-contract",
+      "uris": [
+        "/contracts/create-contract"
+      ]
+    },
+    {
+      "name": "Update Contract Resource",
+      "type": "urn:inspire:update-contract",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-contract",
+      "uris": [
+        "/contracts/update-contract"
+      ]
+    },
+    {
+      "name": "Add Additional Funds Resource",
+      "type": "urn:inspire:add-additional-funds",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-add-additional-funds",
+      "uris": [
+        "/funds/add-additional-funds"
+      ]
+    },
+    {
+      "name": "Remove Additional Funds Resource",
+      "type": "urn:inspire:remove-additional-funds",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-remove-additional-funds",
+      "uris": [
+        "/funds/remove-additional-funds"
+      ]
+    },
+    {
+      "name": "Get Contracts Resource",
+      "type": "urn:inspire:get-contracts",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-contracts",
+      "uris": [
+        "/contracts/get-contracts"
+      ]
+    },
+    {
+      "name": "Get All Contracts Resource",
+      "type": "urn:inspire:get-all-contracts",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-all-contracts",
+      "uris": [
+        "/contracts/get-all-contracts"
+      ]
+    },
+    {
+      "name": "Update Contract Salary Resource",
+      "type": "urn:inspire:update-contract-sal",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-contract-salary",
+      "uris": [
+        "/contracts/update-contract-salary"
+      ]
+    },
+    {
+      "name": "Add Increment Resource",
+      "type": "urn:inspire:add-increment",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-add-increment",
+      "uris": [
+        "/increments/add-increment"
+      ]
+    },
+    {
+      "name": "Update Increment Resource",
+      "type": "urn:inspire:update-increment",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-increment",
+      "uris": [
+        "/increments/update-increment"
+      ]
+    },
+    {
+      "name": "Delete Increment Resource",
+      "type": "urn:inspire:delete-increment",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-delete-increment",
+      "uris": [
+        "/increments/delete-increment"
+      ]
+    },
+    {
+      "name": "Update Salary Resource",
+      "type": "urn:inspire:update-salary",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-salary",
+      "uris": [
+        "/salaries/update-salary"
+      ]
+    },
+    {
+      "name": "Update Contract Bonus Resource",
+      "type": "urn:inspire:update-contract-bonus",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-contract-bonus",
+      "uris": [
+        "/contracts/update-contract-bonus"
+      ]
+    },
+    {
+      "name": "Update Contracts Bonuses Resource",
+      "type": "urn:inspire:update-contracts-bonuses",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-contracts-bonuses",
+      "uris": [
+        "/contracts/update-contracts-bonuses"
+      ]
+    },
+    {
+      "name": "Update Bonus Resource",
+      "type": "urn:inspire:update-bonus",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-bonus",
+      "uris": [
+        "/bonuses/update-bonus"
+      ]
+    },
+    {
+      "name": "Delete Bonus Resource",
+      "type": "urn:inspire:delete-bonus",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-delete-bonus",
+      "uris": [
+        "/bonuses/delete-bonus"
+      ]
+    },
+    {
+      "name": "Get Users Information Resource",
+      "type": "urn:inspire:get-users-information",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-users-information",
+      "uris": [
+        "/users/get-users-information"
+      ]
+    },
+    {
+      "name": "Create Currency Resource",
+      "type": "urn:inspire:create-currency",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-currency",
+      "uris": [
+        "/currencies/create-currency"
+      ]
+    },
+    {
+      "name": "Update Currency Resource",
+      "type": "urn:inspire:update-currency",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-update-currency",
+      "uris": [
+        "/currencies/update-currency"
+      ]
+    },
+    {
+      "name": "Delete Currency Resource",
+      "type": "urn:inspire:delete-currency",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-delete-currency",
+      "uris": [
+        "/currencies/delete-currency"
+      ]
+    },
+    {
+      "name": "Get Currencies Resource",
+      "type": "urn:inspire:get-currencies",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-currencies",
+      "uris": [
+        "/currencies/get-currencies"
+      ]
+    },
+    {
+      "name": "Create Bonus Resource",
+      "type": "urn:inspire:create-bonus",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-create-bonus",
+      "uris": [
+        "/bonuses/create-bonus"
+      ]
+    },
+    {
+      "name": "Get Bonuses Resource",
+      "type": "urn:inspire:get-bonuses",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "unique-id-get-bonuses",
+      "uris": [
+        "/bonuses/get-bonuses"
+      ]
+    },
+    {
+      "name": "hr",
+      "type": "hr ",
+      "ownerManagedAccess": false,
+      "displayName": "test",
+      "attributes": {},
+      "_id": "c369894f-a037-4bd4-b8fe-ffd10b3e3841",
+      "uris": [
+        "/hr/*"
+      ],
+      "icon_uri": ""
+    }
+  ],
+  "scopes": [],
+  "decisionStrategy": "UNANIMOUS"
+}
