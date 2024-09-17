@@ -17,11 +17,11 @@ import reactor.core.publisher.Mono;
 import java.nio.charset.StandardCharsets;
 
 @Component
-public class AuthorizationGatewayFilter implements GatewayFilter {
+public class AuthorizationErpGatewayFilter implements GatewayFilter {
 
     @Autowired
     private WebClient.Builder webClientBuilder;
-    private static final Logger log = LoggerFactory.getLogger(AuthorizationGatewayFilter.class);
+    private static final Logger log = LoggerFactory.getLogger(AuthorizationErpGatewayFilter.class);
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -29,18 +29,20 @@ public class AuthorizationGatewayFilter implements GatewayFilter {
         String resource = exchange.getRequest().getPath().value();
         HttpMethod method = exchange.getRequest().getMethod();
 
+
+        resource = resource.substring("/api".length());
+
         log.info("Resource: {}", resource);
         log.info("HTTP Method: {}", method);
 
         return webClientBuilder.build()
                 .method(method)
-                .uri("lb://RESOURCE-SERVICE" + resource)
+                .uri("http://resource-service.keycloak.svc.cluster.local:8082" + resource)
                 .header(HttpHeaders.AUTHORIZATION, authHeader)
                 .exchangeToMono(response -> {
                     if (response.statusCode().is2xxSuccessful()) {
                         return chain.filter(exchange);
                     } else {
-                        // Create an error response body
                         String errorBody = "{\"error\": \"Unauthorized access\", \"status\": 401, \"message\": \"Access denied to resource\"}";
                         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
                         exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
