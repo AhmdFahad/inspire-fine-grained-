@@ -14,3 +14,10 @@ eureka:
 server:
   port: 8082
 
+keycloak:
+  policy-enforcer:
+    realm: inspire
+    auth-server-url: http://localhost:8080
+    resource: inspire-client
+    credentials:
+      secret: vYNJUuz0o2Oux2iCI78MU926BsZYkMky

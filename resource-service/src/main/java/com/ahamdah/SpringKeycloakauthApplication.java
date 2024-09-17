@@ -19,11 +19,15 @@ public class SpringKeycloakauthApplication implements CommandLineRunner {
 	private String port;
 	@Value("${spring.profiles.active}")
 	private String activeProfile;
-
+	@Value("${keycloak.policy-enforcer.realm}")
+	private String realm;
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("Server started at port " + port);
 		logger.info("Active profile: " + activeProfile);
+		logger.info("realm: " + realm);
+
+
 	}
 
 	public static void main(String[] args) {
