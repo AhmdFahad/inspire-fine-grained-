@@ -11,12 +11,13 @@
 
 	<groupId>com.ahamdah</groupId>
 	<artifactId>resource-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>resource-service</name>
 	<description>fine grained</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
+		<jkube.generator.name>ahmad1inspire/inspire-${project.name}:${project.version}</jkube.generator.name>
 	</properties>
 
 	<url/>
@@ -84,10 +85,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -103,6 +104,11 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jkube</groupId>
+				<artifactId>kubernetes-maven-plugin</artifactId>
+				<version>1.17.0</version>
 			</plugin>
 		</plugins>
 	</build>

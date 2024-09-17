@@ -1,8 +1,8 @@
 {
   "realm": "inspire",
-  "auth-server-url": "http://localhost:8080",
-  "resource": "inspire-client",
+  "auth-server-url": "http://keycloak.keycloak.svc.cluster.local:8080",
+  "resource": "gateway-client",
   "credentials": {
-    "secret": "yZCG7JfValPT0eRESj9WblcSKkjkvEHW"
+    "secret": "Ki4BEcyByLyUVEHSs5hZnf8GsG6ehLyP"
   }
 }
