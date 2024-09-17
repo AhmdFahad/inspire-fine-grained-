@@ -1,25 +1,14 @@
-server.port: 8082
 spring:
   application:
     name: resource-service
   output:
     ansi:
       enabled: always
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://keycloak:8080/realms/inspire/protocol/openid-connect/certs
+  profiles:
+    active: @active@
 logging:
   level:
     root: INFO
     org:
       keycloak: DEBUG
       keycloak.adapters: DEBUG
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    enabled: ${EUREKA_CLIENT_ENABLED:true}
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}

@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:8080/realms/inspire/protocol/openid-connect/certs
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    enabled: ${EUREKA_CLIENT_ENABLED:true}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://eureka-server:8761/eureka}
+server:
+  port: 8080
+
